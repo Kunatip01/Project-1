@@ -1,0 +1,361 @@
+/* General Styles */
+/* Basic body styling to set font, margin, padding, height, and background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: transparent;
+}
+
+/* Navbar Styles */
+/* Styling for the navbar including background color and positioning */
+.navbar {
+    background-color: #343a40;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Styling the navbar brand and links */
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+/* Product Card Styles */
+/* Styling for the product cards in the product list */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Ensures images inside product cards fit within the container */
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Allows the card body to grow as needed */
+.product-card .card-body {
+    flex-grow: 1;
+}
+
+/* Sets margins for the title and text in the product cards */
+.product-card .card-title,
+.product-card .card-text {
+    margin-bottom: 15px;
+}
+
+/* Styling for the price in product cards */
+.product-card .price {
+    font-size: 1.2em;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+/* Ensures buttons inside the product cards are positioned correctly */
+.product-card .btn {
+    margin-top: auto;
+}
+
+/* Styling for the quantity input field */
+.quantity-input {
+    width: 60px;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+/* Primary button styling (green) */
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* Cart Icon */
+/* Positioning and styling for the shopping cart icon */
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styling for the cart count number (badge) */
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Carousel Styles */
+/* Carousel items styling, setting height and responsiveness */
+.carousel-item {
+    height: 400px;
+    /* Fixed height for the carousel on larger screens */
+}
+
+/* Ensures carousel images fit the container while maintaining aspect ratio */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure the whole image fits within the container */
+}
+
+/* Custom styling for the carousel, including border and shadow */
+.carousel-custom {
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Centered Text */
+/* Styling for centered text in carousel (over images) */
+.centered {
+    position: absolute;
+    top: 50%;
+    /* Adjusted for positioning */
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    /* Ensure the text is above the image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    /* Add shadow to the text for visibility */
+    font-size: 100px;
+    /* Large font for visibility */
+}
+
+/* About Us Section */
+/* Styling for the About Us section with margins and text shadow */
+#aboutus {
+    margin: 0 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    height: 100%;
+    /* Allow full height */
+}
+
+/* Title styling for the About Us section */
+#aboutus .card-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Text styling for the About Us section */
+#aboutus .card-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Video Background */
+/* Styling for the background video to ensure full-screen display */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Ensures the iframe video stays centered and covers the whole screen */
+.video-background iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.78vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Footer Styles */
+/* Center text in the footer and set color to white */
+footer {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Category Buttons */
+/* Styling for the buttons in the category section */
+#category-buttons {
+    margin-bottom: 20px;
+}
+
+/* Basic button styles for category buttons */
+#category-buttons button {
+    background-color: lightgray;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Active button styling in the category section */
+#category-buttons button.active {
+    background-color: black;
+    color: white;
+}
+
+/* Hover state for category buttons */
+#category-buttons button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Responsive Styles */
+/* Media query for tablet and smaller devices */
+@media (max-width: 992px) {
+    .cart-icon {
+        margin-right: 15px;
+    }
+
+    .navbar-toggler {
+        border-color: white;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .nav-item {
+        margin-top: 10px;
+    }
+
+    /* Adjust the size of quantity input on tablets */
+    .quantity-input {
+        width: 60px;
+        font-size: 14px;
+    }
+
+    /* Set carousel height for tablets */
+    .carousel-item {
+        height: 300px;
+        /* Smaller fixed height for mobile devices */
+    }
+
+    /* Adjust centered text size for tablets */
+    .centered {
+        font-size: 50px;
+        /* Adjust text size for mobile */
+    }
+
+    /* Reduce font size for About Us section on tablets */
+    #aboutus .card-title {
+        font-size: 1.5rem;
+        /* Reduce font size for tablets */
+    }
+
+    #aboutus .card-text {
+        font-size: 1rem;
+        /* Reduce font size for tablets */
+    }
+
+    /* Add some margin around product cards on tablets */
+    .product-card {
+        margin: 10px;
+    }
+
+    /* Adjust price font size for product cards on smaller screens */
+    .product-card .price {
+        font-size: 1em;
+    }
+
+    /* Allow the text to take up available space in About Us */
+    #aboutus {
+        flex-grow: 1;
+    }
+}
+
+/* Media Queries for Very Small Devices */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 16px;
+        /* Further reduce font size for small devices */
+    }
+
+    /* Reduce padding in product cards on small devices */
+    .product-card {
+        padding: 10px;
+    }
+
+    /* Reduce title size for product cards on small devices */
+    .product-card .card-title {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust text size for product cards on small devices */
+    .product-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust button font size on small devices */
+    .product-card .btn {
+        font-size: 0.9rem;
+    }
+
+    /* Reduce padding and font size in category buttons on small devices */
+    #category-buttons button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Adjust height of carousel for small screens */
+    .carousel-item {
+        height: 250px;
+    }
+
+    /* Ensure the image fits within the carousel on small screens */
+    .carousel-item img {
+        object-fit: contain;
+    }
+
+    /* Adjust text size for small screens */
+    .centered {
+        font-size: 35px;
+    }
+
+    /* Reduce margins for the About Us section on small screens */
+    #aboutus {
+        margin: 0 10px;
+    }
+
+    /* Reduce font size further for the About Us section on small screens */
+    #aboutus .card-title {
+        font-size: 1.3rem;
+    }
+
+    #aboutus .card-text {
+        font-size: 0.7rem;
+    }
+
+    /* Hide carousel images on very small screens */
+    .carousel-item img {
+        display: none;
+    }
+}
